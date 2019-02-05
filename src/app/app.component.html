@@ -1,19 +1,14 @@
-
-
-
-
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Animal Site In Progress!
-  </h1>
-</div>
-
-<button mat-button color="primary">Home</button>
-<button mat-button color="primary">About Us</button>
-<button mat-button color="primary">Button1</button>
-<button mat-button color="primary">Button2</button>
-<button mat-button color="primary">Contact Us</button>
-
-
+<mat-toolbar color="primary">Angel Wings Animal Sanctuary 
+  <div class="buttonContainer">
+  <button mat-button [routerLink]="['/']">Home</button>
+  <button mat-button [routerLink]="['/about']">About</button>
+  <button mat-button [routerLink]="['/contact']">Contact Us</button>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/ihelp']">How Can I Help</button>
+    <button mat-menu-item [routerLink]="['/rlinks']">Resource Links</button>
+  </mat-menu>
+  </div>
+</mat-toolbar>
 <router-outlet></router-outlet>
+
